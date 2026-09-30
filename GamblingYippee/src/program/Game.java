@@ -1,5 +1,8 @@
 package program;
 
+import java.util.Scanner;
+import java.util.ArrayList;
+
 public class Game {
 	private String title = " ________  _____ ______   ________  ________            _______  ________            \r\n"
 			+ "|\\   ____\\|\\   _ \\  _   \\|\\   ____\\|\\   ____\\          /  ___  \\|\\  ___  \\           \r\n"
@@ -31,6 +34,12 @@ public class Game {
 	
 	public void intro() {
 		System.out.println(title);
-		//System.out.println("Welcome to Mrs. Hallisey's Gambling Game!");
+	}
+	
+	public void gameLoop() {
+		Scanner input = new Scanner(System.in);
+		ArrayList<Coin> coins = new ArrayList<Coin>();
+		coins.add(new Coin(0.5,0,0));
+		System.out.print(coins.get(0).getVars());
 	}
 }
