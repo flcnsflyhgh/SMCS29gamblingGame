@@ -5,8 +5,9 @@ public class Coin {
 	private double critChance;
 	private double winCash ;
 	
-	//constructors
+	//--------------------------------------------------------------
 	
+	//constructors
 	public Coin() {
 		winChance = 0;
 		critChance = 0;
@@ -18,27 +19,43 @@ public class Coin {
 		winCash = c;
 	}
 	
-	//getter
-	public double[] getVars() {
-		double[] vars = {winChance,critChance,winCash};
-		return vars;
+	//--------------------------------------------------------------
+	
+	//getters
+	public double getWinChance() {
+		return winChance;
+	}
+	
+	public double getCritChance() {
+		return critChance;
+	}
+	
+	public double getWinCash() {
+		return winCash;
 	}
 	
 	//setters
 	public void setWinChance(double x) {
-		winChance = x;
+		winChance = (x>=0) ? x:winChance;
 	}
 	
 	public void setCritChance(double x) {
-		critChance = x;
+		critChance = (x>=0) ? x:critChance;
 	}
 	
 	public void setWinCash(double x) {
-		winCash = x;
+		winCash = (x>=0) ? x:winCash;
 	}
+	
+	//--------------------------------------------------------------
 	
 	//methods
 	public double flip() {
 		return (Math.random()<winChance) ? ((Math.random()<critChance) ? winCash:0):0;
 	}
 }
+
+
+
+
+

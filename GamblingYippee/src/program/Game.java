@@ -32,14 +32,19 @@ public class Game {
 			+ "   \\ \\_______\\ \\__\\ \\__\\ \\__\\    \\ \\__\\ \\_______\\                                    \r\n"
 			+ "    \\|_______|\\|__|\\|__|\\|__|     \\|__|\\|_______|                                    \n";
 	
+	private String = " ";
+	
 	public void intro() {
 		System.out.println(title);
+		System.out.println();
 	}
 	
 	public void gameLoop() {
 		Scanner input = new Scanner(System.in);
 		ArrayList<Coin> coins = new ArrayList<Coin>();
-		coins.add(new Coin(0.5,0,0));
-		System.out.print(coins.get(0).getVars());
+		
+		
+		coins.add(new Coin(0.5,0,10));
+		System.out.print(coins.get(0).getWinCash());
 	}
 }
